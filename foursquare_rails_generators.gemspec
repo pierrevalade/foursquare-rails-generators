@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'foursquare_rails_generators'
-  s.version       = '0.1.2'
+  s.version       = '0.1.3'
   s.date          = '2012-10-26'
   s.summary       = "Foursquare Rails Generators"
   s.description   = "Collection of Rails generators for the Foursquare API"

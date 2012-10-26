@@ -1,6 +1,8 @@
 module Foursquare
 	module Generators
 		class AuthenticationGenerator < Rails::Generators::Base
+			include Rails::Generators::Migration
+			
 			source_root File.expand_path("../templates", __FILE__)
 
 			desc "Adds Foursquare Connect to your app"
