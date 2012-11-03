@@ -9,11 +9,16 @@ module Foursquare
 			argument :settings, type: :hash, banner: "client_id:id client_secret:secret"
 
 			def validates_settings
-				raise "incorret params" if settings['client_id'].blank? || settings['client_secret'].blank?
+				raise "incorret client_id or client_secret" if settings['client_id'].blank? || settings['client_secret'].blank?
 			end
 
 			def add_oauth2_gem
 				gem 'oauth2'
+			end
+
+			# hack around https://github.com/rails/rails/pull/5139
+			def self.next_migration_number(dirname)
+				ActiveRecord::Generators::Base.next_migration_number
 			end
 
 			def create_foursquare_user_model
