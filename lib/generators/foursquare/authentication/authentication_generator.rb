@@ -18,11 +18,11 @@ module Foursquare
 
 			# hack around https://github.com/rails/rails/pull/5139
 			def self.next_migration_number(dirname)
-				ActiveRecord::Generators::Base.next_migration_number
+				'20121103111300'
 			end
 
 			def create_foursquare_user_model
-				migration_template 'migrations/create_foursquare_user.rb'
+				migration_template 'migrations/create_foursquare_user.rb', 'db/migrate/create_foursquare_users'
 				template 'models/foursquare_user.rb', File.join('app/models/', 'foursquare_user.rb')
 			end
 
