@@ -4,6 +4,6 @@ For now, it's only available when you create a new Rails app from scratch (but i
 
 To create a new app with Foursquare and deploy to Heroku, run:
 
-> rails new {your-unique-app-name} -d postgresql -m https://raw.github.com/gist/4007411/e0580f5e0db6bc91d3e329ecfb8b78580d858865/gistfile1.rb
+> rails new {your-unique-app-name} -d postgresql -m https://gist.github.com/pierrevalade/4007411/raw/e0580f5e0db6bc91d3e329ecfb8b78580d858865/gistfile1.rb
 
 Note: try to make sure {your-unique-app-name} is unique or Heroku won't let you create an app with a name that's already taken.
